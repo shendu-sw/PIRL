@@ -1,4 +1,4 @@
-# reconstruction
+# PIRL for temperature field reconstruction of heat source systems
 ## Introduction
 This project provides the implementation of the paper "Physics-Informed Deep Reversible Regression Model for Temperature Field Reconstruction of Heat-Source Systems". [[paper](https://arxiv.org/abs/2106.11929)]
 
