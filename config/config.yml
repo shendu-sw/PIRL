@@ -5,11 +5,13 @@
 ## FCN_AlexNet, FCN_VGG, FCN_ResNet18, FCN_ResNet50, FCN_ResNet101, FCN_ResNet34, FCN_ResNet152
 ## UNet_VGG
 #### model configuration for UNet_1
-model_name: FCN # choose from FPN, FCN, SegNet, UNet
-backbone: AlexNet # choose from AlexNet, VGG, ResNet18, ResNet50, ResNet101
+model_name: UNet # choose from FPN, FCN, SegNet, UNet
+backbone: VGG # choose from AlexNet, VGG, ResNet18, ResNet50, ResNet101
+#### reversible regression model
+rev_model: True # use model_2 or not
 #### model configuration for UNet_2
-model_2_name: FCN # choose from FPN, FCN, SegNet, UNet
-backbone_2: AlexNet # choose from AlexNet, VGG, ResNet18, ResNet50, ResNet101
+model_2_name: UNet # choose from FPN, FCN, SegNet, UNet
+backbone_2: VGG # choose from AlexNet, VGG, ResNet18, ResNet50, ResNet101
 
 # dataset path
 data_root: samples/data/

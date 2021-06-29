@@ -46,13 +46,15 @@ class Model(LightningModule):
         layout_model = self.hparams.model_name + '_' + self.hparams.backbone
         assert layout_model in model_list
         self.model = getattr(models, layout_model)(in_channels=1)
-        #self.model_1 = models.FCN_AlexNet(in_channels=1)
+        layout_model_2 = self.hparams.model_2_name + '_' + self.hparams.backbone_2
+        assert layout_model_2 in model_list
+        self.model_2 = getattr(models, layout_model_2)(in_channels=1)
 
     def forward(self, x):
         x = self.model(x)
-        x = torch.flip(x,dims=[2,3])
-        #x = self.model_1(x)
-        x = self.model(x)
+        if self.hparams.rev_model:
+            x = torch.flip(x,dims=[2,3])
+            x = self.model_2(x)
         return x
 
     def __dataloader(self, dataset, shuffle=False):
@@ -271,5 +273,6 @@ class Model(LightningModule):
         parser.add_argument("--backbone", type=str, default='ResNet18', help="the used backbone in the regression model")
         parser.add_argument("--model_2_name", type=str, default='SegNet', help="the name of chosen model")
         parser.add_argument("--backbone_2", type=str, default='ResNet18', help="the used backbone in the regression model")
+        parser.add_argument("--rev_model", type=bool, default=True, help="Reversible Regression Model or not")
         
         return parser
