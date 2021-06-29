@@ -4,12 +4,12 @@ This project provides the implementation of the paper "Physics-Informed Deep Rev
 
 ## Requirements
 
-    * Software
-        * python
-        * cuda
-        * pytorch
-    * Hardware
-        * GPU with at least 4GB
+* Software
+    * python
+    * cuda
+    * pytorch
+* Hardware
+    * GPU with at least 4GB
 
 ## Environment construction
 
