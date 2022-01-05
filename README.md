@@ -112,7 +112,7 @@ If you find this work helpful for your research, please consider citing:
 
 ```
 @article{gong2021,
-    Author = {Zhiqiang Gong and Weien Zhou and Jun Zhang and Wei Peng and Wen Yao},
+    Author = {Zhiqiang Gong and Weien Zhou and Wei Peng and Wen Yao},
     Title = {Physics-Informed Deep Reversible Regression Model for Temperature Field Reconstruction of Heat-Source Systems},
     Journal = {arXiv preprint arXiv:2106.11929},
     Year = {2021}
